@@ -18,7 +18,7 @@ class imageApi extends events {
             }
             else {
                 if (images.length == 0) {
-                    self.emit('success', {"message": "No images found for the album name"});
+                    self.emit('success', {"message": "No images found for the album number"});
                 } else {
                     self.emit('success', images);
                 }
@@ -46,27 +46,28 @@ class imageApi extends events {
         });
     }
 
-    insertImage(body) {
+    insertImages(body) {
         let self = this;
         // create a new instance of the Image model
-        var image = new Image();
-        image.imageId = body.imageId;  // set the bears name (comes from the request)
-        image.imageName = body.imageName;
-        image.imageURL = body.imageURL;
-        image.albumName = body.albumName;
-
-        // save the bear and check for errors
-        image.save(function (err) {
-            if (err) {
-                // res.send(err);
-                // res.json({ message: 'error!' });
-                self.emit('error', { error: 'error' });
-            }
-            else {
-                // res.json({ message: 'Image created!' });
-                self.emit('success', { message: 'Image created!' });
-            }
-        });
+        for (let i of body.images) {
+            var image = new Image();
+            image.imageId = i.imageId;
+            image.imageName = i.imageName;
+            image.imageURL = i.imageURL;
+            image.albumName = i.albumName;
+    
+            // save the data and check for errors
+            image.save(function (err) {
+                if (err) {
+                    self.emit('error', { error: 'error' });
+                }
+                // else {
+                    // res.json({ message: 'Image created!' });
+                    // self.emit('success', { message: `${body.images.length} Images created!` });
+                // }
+            });
+        }
+        self.emit('success', { message: `${body.images.length} Images created!` });
     }
 
     removeAllImages() {
@@ -98,7 +99,7 @@ class imageApi extends events {
                 self.emit('error', { error: 'error' });
             }
             else {
-                self.emit('success', { message: `Successfully updated number of likes for ${imageId}` });
+                self.emit('success', { message: `Successfully updated number of likes for imageId: ${imageId}` });
             }
         });
     }

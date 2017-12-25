@@ -20,7 +20,7 @@ router.get('/images/album_number/:album_number', (req, res) => {
         }
         else {
             res.status(200);
-            res.json({ status: 200, message: "success", Data: result });
+            res.json({ status: 200, message: "success", data: result });
         }
     })
 })
@@ -35,7 +35,7 @@ router.get('/images/all', function(req, res) {
         }
         else {
             res.status(200);
-            res.json({ status: 200, message: "success", Data: result });
+            res.json({ status: 200, message: "success", data: result });
         }
     })
 })
@@ -44,14 +44,14 @@ router.post('/images/create', function(req, res) {
     // res.json({ message: 'hooray! welcome to our apisss!' });
 
     let body = req.body;
-    apiObj.createImage(body, (err, result) => {
+    apiObj.createImages(body, (err, result) => {
         if (err) {
             res.status(400);
             res.json({ status: 400, message: err });
         }
         else {
             res.status(200);
-            res.json({ status: 200, message: "success", Data: result });
+            res.json({ status: 200, message: "success", data: result });
         }
     })
 })
@@ -67,7 +67,7 @@ router.put('/images/update/like', function(req, res) {
         }
         else {
             res.status(200);
-            res.json({ status: 200, message: "success", Data: result });
+            res.json({ status: 200, message: "success", data: result });
         }
     })
 })
@@ -80,7 +80,7 @@ router.delete('/images/all', function(req, res) {
         }
         else {
             res.status(200);
-            res.json({ status: 200, message: "success", Data: result });
+            res.json({ status: 200, message: "success", data: result });
         }
     })
 });

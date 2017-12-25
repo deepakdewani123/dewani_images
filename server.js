@@ -55,12 +55,6 @@ db.once('open', function() {
 
 /*for controllers folder*/
 app.use(require('./controllers/imageController'));
-// app.use(require('./controllers/aboutController'));
-// app.use(require('./controllers/calendarController'));
-// app.use(require('./controllers/emailController'));
-// app.use(require('./controllers/newsController'));
-// app.use(require('./controllers/searchController'));
-// app.use(require('./controllers/onboardingController'));
 
 app.get('/', function (req, res) {
   res.send(`api service running on ${url}:${port}`);
@@ -89,7 +83,7 @@ app.use(function (err, req, res, next) {
 // app.use('/app', router);
 
 app.listen(port, () => {
-  console.log(`Webhooks service running on localhost:${port}`)
+  console.log(`API service running on localhost:${port}`)
 })
 
-console.log('RESTful API server started on: ' + port);
+// console.log('RESTful API server started on: ' + port);

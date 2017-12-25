@@ -29,7 +29,7 @@ const getAllImages = (callback) => {
     apiObj.readAllImages();
 }
 
-const createImage = (body, callback) => {
+const createImages = (body, callback) => {
     let apiObj = new Api;
 
     apiObj.on('error', (err) => {
@@ -40,7 +40,7 @@ const createImage = (body, callback) => {
         callback(null, result);
     });
 
-    apiObj.insertImage(body);
+    apiObj.insertImages(body);
 }
 
 const deleteAllImages = (callback) => {
@@ -75,7 +75,7 @@ const updateNumberOfLikesForImage = (imageId, callback) => {
 module.exports = {
     getImagesForAlbumNumber,
     getAllImages,
-    createImage,
+    createImages,
     deleteAllImages,
     updateNumberOfLikesForImage
 }
