@@ -1,0 +1,30 @@
+{
+  "name": "webhooks-updated",
+  "version": "1.0.0",
+  "description": "webhooks",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "async": "^2.5.0",
+    "bluebird": "^3.5.0",
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "ejs": "~2.5.6",
+    "express": "~4.15.2",
+    "moment": "^2.19.1",
+    "mongoose": "^4.7.9",
+    "morgan": "~1.8.1",
+    "nodemon": "^1.14.3",
+    "querystring": "^0.2.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.2",
+    "serve-favicon": "~2.4.2",
+    "shortid": "^2.2.8"
+  },
+  "author": "deepak",
+  "license": "ISC"
+}
