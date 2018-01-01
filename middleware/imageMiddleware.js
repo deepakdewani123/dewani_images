@@ -43,6 +43,20 @@ const createImages = (body, callback) => {
     apiObj.insertImages(body);
 }
 
+const createAlbums = (body, callback) => {
+    let apiObj = new Api;
+
+    apiObj.on('error', (err) => {
+        callback(err, null);
+    });
+
+    apiObj.on('success', (result) => {
+        callback(null, result);
+    });
+
+    apiObj.insertAlbums(body);
+}
+
 const deleteAllImages = (callback) => {
     let apiObj = new Api;
 
@@ -70,6 +84,34 @@ const updateNumberOfLikesForImage = (imageId, callback) => {
     apiObj.updateLikesForImage(imageId);
 }
 
+const updateNumberOfUnlikesForImage = (imageId, callback) => {
+    let apiObj = new Api;
+
+    apiObj.on('error', (err) => {
+        callback(err, null);
+    });
+
+    apiObj.on('success', (result) => {
+        callback(null, result);
+    });
+
+    apiObj.updateUnlikesForImage(imageId);
+}
+
+const getAllAlbums = (callback) => {
+    let apiObj = new Api;
+
+    apiObj.on('error', (err) => {
+        callback(err, null);
+    });
+
+    apiObj.on('success', (result) => {
+        callback(null, result);
+    });
+
+    apiObj.readAllAlbums();
+}
+
 
 
 module.exports = {
@@ -77,5 +119,8 @@ module.exports = {
     getAllImages,
     createImages,
     deleteAllImages,
-    updateNumberOfLikesForImage
+    updateNumberOfLikesForImage,
+    updateNumberOfUnlikesForImage,
+    getAllAlbums,
+    createAlbums
 }

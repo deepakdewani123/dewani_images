@@ -1,7 +1,8 @@
 const events = require('events'),
     request = require('request'),
     querystring = require('querystring'),
-    Image = require('../models/image');
+    Image = require('../models/image'),
+    Album = require('../models/album');
 
 
 class imageApi extends events {
@@ -70,6 +71,29 @@ class imageApi extends events {
         self.emit('success', { message: `${body.images.length} Images created!` });
     }
 
+    insertAlbums(body) {
+        let self = this;
+        // create a new instance of the Image model
+        for (let i of body.albums) {
+            var album = new Album();
+            album.name = i.name;
+            album.coverImageURL = i.coverImageURL;
+            album.coverTitle = i.coverTitle;
+    
+            // save the data and check for errors
+            album.save(function (err) {
+                if (err) {
+                    self.emit('error', { error: 'error' });
+                }
+                // else {
+                    // res.json({ message: 'Image created!' });
+                    // self.emit('success', { message: `${body.images.length} Images created!` });
+                // }
+            });
+        }
+        self.emit('success', { message: `${body.albums.length} Albums created!` });
+    }
+
     removeAllImages() {
         let self = this;
         // create a new instance of the Image model
@@ -100,6 +124,45 @@ class imageApi extends events {
             }
             else {
                 self.emit('success', { message: `Successfully updated number of likes for imageId: ${imageId}` });
+            }
+        });
+    }
+
+    updateUnlikesForImage(imageId) {
+        let self = this;
+        // create a new instance of the Image model
+
+        Image.update(
+            {"imageId": imageId},
+            {$inc: {"numberOfLikes": -1}},
+            {new: true},
+            function(err) {
+            if (err) {
+                // res.send(err);
+                self.emit('error', { error: 'error' });
+            }
+            else {
+                self.emit('success', { message: `Successfully updated number of likes for imageId: ${imageId}` });
+            }
+        });
+    }
+
+    readAllAlbums() {
+        let self = this;
+        Album.find(function (err, albums) {
+            if (err) {
+                // res.send(err);
+                self.emit('error', { error: 'error' });
+            }
+            else {
+                // res.json(images);
+                
+                if (albums.length == 0) {
+                    self.emit('success', {"message": "No albums found"});
+                } else {
+                    self.emit('success', albums);
+                }
+                
             }
         });
     }

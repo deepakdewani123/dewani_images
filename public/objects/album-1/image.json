@@ -1,0 +1,26 @@
+[
+  {
+    "imageId": "36jzad",
+    "imageName": "36jzad",
+    "imageURL":
+      "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/album-1/36jzad.jpg",
+    "albumName": "album-1",
+    "likes": 0
+  },
+  {
+    "imageId": "twwthp",
+    "imageName": "twwthp",
+    "imageURL":
+      "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/album-1/twwthp.jpg",
+    "albumName": "album-1",
+    "likes": 0
+  },
+  {
+    "imageId": "hqo2i0",
+    "imageName": "hqo2i0",
+    "imageURL":
+      "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/album-1/hqo2i0.jpg",
+    "albumName": "album-1",
+    "likes": 0
+  }
+]
