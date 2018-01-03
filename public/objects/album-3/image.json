@@ -1,26 +1,47 @@
 [
   {
-    "imageId": "8dw2ew",
-    "imageName": "8dw2ew",
+    "imageId": "2z1w8z",
+    "imageName": "2z1w8z",
     "imageURL":
-      "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/album-3/8dw2ew.jpg",
+      "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/album-3/2z1w8z.jpg",
     "albumName": "album-3",
-    "likes": 0
+    "likes": 0,
+    "loaded": false
   },
   {
-    "imageId": "9cqgos",
-    "imageName": "9cqgos",
+    "imageId": "qid3zf",
+    "imageName": "qid3zf",
     "imageURL":
-      "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/album-3/9cqgos.jpg",
+      "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/album-3/qid3zf.jpg",
     "albumName": "album-3",
-    "likes": 0
+    "likes": 0,
+    "loaded": false
   },
   {
-    "imageId": "t0xen1",
-    "imageName": "t0xen1",
+    "imageId": "l7xc1w",
+    "imageName": "l7xc1w",
     "imageURL":
-      "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/album-3/t0xen1.jpg",
+      "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/album-3/l7xc1w.jpg",
     "albumName": "album-3",
-    "likes": 0
+    "likes": 0,
+    "loaded": false
+  },
+  {
+    "imageId": "dvapuy",
+    "imageName": "dvapuy",
+    "imageURL":
+      "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/album-3/dvapuy.jpg",
+    "albumName": "album-3",
+    "likes": 0,
+    "loaded": false
+  },
+  {
+    "imageId": "16wlpw",
+    "imageName": "16wlpw",
+    "imageURL":
+      "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/album-3/16wlpw.jpg",
+    "albumName": "album-3",
+    "likes": 0,
+    "loaded": false
   }
 ]

@@ -1,26 +1,47 @@
 [
   {
-    "imageId": "9c92ik",
-    "imageName": "9c92ik",
+    "imageId": "qu3jlv",
+    "imageName": "qu3jlv",
     "imageURL":
-      "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/album-2/9c92ik.jpg",
+      "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/album-2/qu3jlv.jpg",
     "albumName": "album-2",
-    "likes": 0
+    "likes": 0,
+    "loaded": false
   },
   {
-    "imageId": "w1js6e",
-    "imageName": "w1js6e",
+    "imageId": "920he0",
+    "imageName": "920he0",
     "imageURL":
-      "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/album-2/w1js6e.jpg",
+      "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/album-2/920he0.jpg",
     "albumName": "album-2",
-    "likes": 0
+    "likes": 0,
+    "loaded": false
   },
   {
-    "imageId": "24fofk",
-    "imageName": "24fofk",
+    "imageId": "5yvl2k",
+    "imageName": "5yvl2k",
     "imageURL":
-      "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/album-2/24fofk.jpg",
+      "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/album-2/5yvl2k.jpg",
     "albumName": "album-2",
-    "likes": 0
+    "likes": 0,
+    "loaded": false
+  },
+  {
+    "imageId": "54taj6",
+    "imageName": "54taj6",
+    "imageURL":
+      "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/album-2/54taj6.jpg",
+    "albumName": "album-2",
+    "likes": 0,
+    "loaded": false
+  },
+  {
+    "imageId": "cw0170",
+    "imageName": "cw0170",
+    "imageURL":
+      "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/album-2/cw0170.jpg",
+    "albumName": "album-2",
+    "likes": 0,
+    "loaded": false
   }
 ]

@@ -8,6 +8,7 @@ import string
 import random
 import json
 from collections import OrderedDict
+# from PIL import Image
 
 
 def rename_files():
@@ -15,12 +16,18 @@ def rename_files():
     directory = os.listdir(os.getcwd())
     album_name = 'album-' + str(sys.argv[1])
     baseURL = "https://s3-ap-southeast-1.amazonaws.com/kr-app-content/images/"
+
     for file_name in directory:
         if file_name.endswith('jpg'):
             print('dfa')
+            # image_file = file_name
+            # im = Image.open(image_file)
+            # return value is a tuple, ex.: (1200, 800)
+            # width, height = im.size
             new_file_name = id_generator()
             os.rename(file_name, new_file_name + '.jpg')
-            images.append(OrderedDict([('imageId', new_file_name),('imageName', new_file_name),('imageURL', baseURL + album_name + '/' + new_file_name + '.jpg'),('albumName', album_name),('likes', 0)]))
+            images.append(OrderedDict([('imageId', new_file_name), ('imageName', new_file_name), (
+                'imageURL', baseURL + album_name + '/' + new_file_name + '.jpg'), ('albumName', album_name), ('likes', 0), ('loaded', bool(0))]))
 
     # album = OrderedDict([('name', album_name), ('coverImageURL', baseURL + album_name + '/cover.jpg'), ('coverTitle', album_name)])
 
@@ -30,9 +37,9 @@ def rename_files():
     # album_file = open('album' + '.json', 'w')
     # album_file.write(json.dumps(album, sort_keys=False))
 
+
 def id_generator(size=6, chars=string.ascii_lowercase + string.digits):
     return ''.join(random.choice(chars) for _ in range(size))
 
 
 rename_files()
-
